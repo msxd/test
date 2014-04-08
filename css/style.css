@@ -8,8 +8,11 @@ body{
 #top_line a{
    font: 14px "Lucida Grande",Helvetica,Arial,sans-serif;
    padding-right: 20px;
+    color: #00B7FF;
 }
-
+#content{
+    padding: 30px;
+}
 #content p{
     font: 20px "Lucida Grande",Helvetica,Arial,sans-serif;
 }
@@ -17,9 +20,6 @@ body{
     margin-right: 5px;
 }
 
-#logo{
-    margin-bottom: 9%;
-}
 
 #p_text{
     font: 25px "Lucida Grande",Helvetica,Arial,sans-serif !important;
