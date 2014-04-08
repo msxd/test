@@ -1,0 +1,33 @@
+body{
+    padding: 15px;
+
+}
+#top_line{
+    padding: 10px;
+}
+#top_line a{
+   font: 14px "Lucida Grande",Helvetica,Arial,sans-serif;
+   padding-right: 20px;
+}
+
+#content p{
+    font: 20px "Lucida Grande",Helvetica,Arial,sans-serif;
+}
+#buttons a{
+    margin-right: 5px;
+}
+
+#logo{
+    margin-bottom: 9%;
+}
+
+#p_text{
+    font: 25px "Lucida Grande",Helvetica,Arial,sans-serif !important;
+
+}
+
+#menupanel{
+    float: left;
+    width: 20%;
+    height: 1000px;
+}
