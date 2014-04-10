@@ -1,84 +1,69 @@
 <!DOCTYPE html>
 <html>
-<meta charset="utf-8">
-<!-- Bootstrap v3.1.1 -->
-<link rel="stylesheet" href="../test/vendors/bootstrap/css/bootstrap.min.css">
-<link rel="stylesheet" href="../test/vendors/bootstrap/css/bootstrap-theme.min.css">
-<link rel="stylesheet" href="../test/css/style.css"/>
 <head>
-    <title>Main page</title>
+	<link rel="stylesheet" type="text/css" href="../test/css/style.css"/>
+	<link rel="stylesheet" type="text/css" href="../test/vendors/bootstrap/css/bootstrap-theme.css"/>
+	<link rel="stylesheet" type="text/css" href="../test/vendors/bootstrap/css/bootstrap.min.css"/>
+	<title>Sign in page</title>
 </head>
 <body>
-
-<div id="menu">
-	<div class="container-fluid">
-		<div class="row-fluid">
-			<div class="well sidebar-nav">
-				<ul class="nav nav-pills nav-stacked">
-					<li class="nav-header">Menu</li>
-					<li><a href="main.html">Home</a></li>
-					<li><a href="#">Projects</a></li>
-					<li><a href="#">Notes</a></li>
-					<li><a href="#">Milestones</a></li>
-					<li class="active"><a href="#">Profile</a></li>
-					<li><a href="#">Users</a></li>
-					<li><a href="#">Cities</a></li>
-				</ul>
+<div id="top">
+	<a href="../test/index.html">Home</a>
+</div>
+<div id="form_sign">
+	<form id="login" class="form-horizontal">
+		<h2 align="center">Sign Up</h2>
+		<div class="form-group">
+			<label class="col-sm-2 control-label">Mail</label>
+			<div class="col-sm-10">
+				<input type="text" id="inp_mail" class="form-control" placeholder="Enter e-mail" type="email" name="email"/>
 			</div>
 		</div>
-	</div>
-</div>
+		<div class="form-group">
+			<label class="col-sm-2 control-label">Password</label>
+			<div class="col-sm-10">
+				<input type="text" id="inp_pass1" class="form-control" placeholder="Enter password" type="password" name="password"/>
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="col-sm-2 control-label">Password confirm</label>
+			<div class="col-sm-10">
+				<input type="text" id="inp_pass2" class="form-control" placeholder="Enter password again" type="password" name="repeat_password"/>
+			</div>
+		</div>
 
+		<div class="form-group">
+			<label class="col-sm-2 control-label">first name</label>
+			<div class="col-sm-10">
+				<input type="text" id="inp_fname" class="form-control" placeholder="Enter password again" type="password" name="first_name"/>
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="col-sm-2 control-label">last name</label>
+			<div class="col-sm-10">
+				<input type="text" id="inp_lname" class="form-control" placeholder="Enter password again" type="password" name="last_name"/>
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="col-sm-2 control-label">phone</label>
+			<div class="col-sm-10">
+				<input type="text" id="inp_phone" class="form-control" placeholder="Enter password again" type="password" name="phone"/>
+			</div>
+		</div>
 
-<div id="top">
-	<a href="#" style="margin-right: 15px;">Main</a>
-	<a href="#">Logout</a>
-</div>
-
-<div id="content" align="center" style="padding-top: 0px;">
-	<div><h2>Profile</h2></div>
-	<div id="profile">
-		<form id="form_profile">
-			<div class="form-group profile_inp">
-				<label class="col-sm-2 control-label">Mail</label>
-				<div class="col-sm-10">
-					<input name="email" class="form-control" id="inp_mail" placeholder="Mail" type="email" />
+		<div class="form-group">
+			<div class="col-sm-offset-2 col-sm-10">
+				<div class="checkbox">
+					<input type="checkbox" id="inp_remember"/> Remember me
 				</div>
 			</div>
-			<div class="form-group profile_inp">
-				<label class="col-sm-2 control-label">First name</label>
-				<div class="col-sm-10">
-					<input name="email" class="form-control" id="inp_first_name" placeholder="First name" type="email" />
-				</div>
+		</div>
+		<div class="form-group">
+			<div class="col-sm-offset-2 col-sm-10">
+				<input type="button" class="btn btn-primary" value="Log In" id="btn_signup"/>
 			</div>
-			<div class="form-group profile_inp">
-				<label class="col-sm-2 control-label">Last name</label>
-				<div class="col-sm-10">
-					<input name="email" class="form-control" id="inp_last_name" placeholder="Last name" type="email" />
-				</div>
-			</div>
-			<div class="form-group profile_inp">
-				<label class="col-sm-2 control-label">Password</label>
-				<div class="col-sm-10">
-					<input name="email" class="form-control" id="inp_pass" placeholder="Password" type="password" />
-				</div>
-			</div>
-			<div class="form-group profile_inp">
-				<label class="col-sm-2 control-label">City</label>
-				<div class="col-sm-10">
-					<input name="email" class="form-control" id="inp_city" placeholder="City" type="email" />
-				</div>
-			</div>
-			<div class="form-group profile_inp">
-				<div id="lis_btn">
-					<button type="button" id="btn_update" class="btn btn-warning" value="">Update</button>
-					<button type="button" id="btn_del" class="btn btn-danger" value="">Delete</button>
-					<button type="button" id="btn_add" class="btn btn-success" value="">Add new user(admin)</button>
-					<button type="button" id="btn__change" class="btn btn-success" value="">Change role(admin)</button>
-				</div>
-			</div>
-		</form>
-	</div>
+		</div>
+	</form>
 </div>
 <script type="text/javascript" src="../test/vendors/jquery/jquery-2.1.0.min.js"></script>
 <script type="text/javascript" src="../test/vendors/jquery/jquery.cookie.js"></script>
@@ -86,3 +71,4 @@
 <script type="text/javascript" src="../test/js/app.js"></script>
 </body>
 </html>
+
