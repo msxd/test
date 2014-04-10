@@ -58,6 +58,8 @@ switch(myLocation(window.location.href)){
 		break;
 	case 'signin.html':
 		if(typeof t_cookie !=='undefined'){
+			$.cookie('message_type',"info");
+			$.cookie('message_mess','You are loged in');
 			window.location.href = "../test/main.html";
 		}
 		break;
@@ -67,6 +69,18 @@ switch(myLocation(window.location.href)){
 			$.cookie('message_type',"danger");
 			$.cookie('message_mess','Please sing in or sing up');
 			window.location.href = "../test/index.html";
+		}else{
+			$.ajax({
+				type: 'GET',
+				url: 'http://192.168.0.122/api/user/profile',
+				success: function(data){
+					$('#inp_mail').val(data.user['email']);
+					$('#inp_first_name').val(data.user['first_name']);
+					$('#inp_last_name').val(data.user['last_name']);
+					$('#inp_phone').val(data.user['phone']);
+					$('#inp_fb').val(data.user['facebook_id']);
+				}
+			});
 		}
 		break;
 	case 'main.html':
@@ -114,9 +128,41 @@ $('#btn_login').click(function(){
 
 //регистрация
 $('#btn_signup').click(function(){
-	
+	var form = $('#login').serialize();
+	$.ajax({
+		type: 'POST',
+		url: 'http://192.168.0.122/api/user/signup',
+		data: form,
+		success: function(data){
+			$.cookie('token',data.token);
+			window.location.href = '../test/main.html'
+		},
+		error: function(xhr, str){
+			console.log(xhr);
+			console.log(str);
+		}
+	});
 });
 
+
+//test
+$('#btn_update').click(function(){
+	var form = $('#form_profile').serialize();
+	$.ajax(
+		{
+			type: 'POST',
+			url: 'http://192.168.0.122/api/user/update',
+			data:form,
+			success: function (data){
+				$('#inp_mail').val(data.user['email']);
+				$('#inp_first_name').val(data.user['first_name']);
+				$('#inp_last_name').val(data.user['last_name']);
+				$('#inp_phone').val(data.user['phone']);
+				$('#inp_fb').val(data.user['facebook_id']);
+			}
+		}
+	);
+});
 /*
 auth
 	$('#c1').click(function(){
