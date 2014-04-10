@@ -1,33 +1,54 @@
 body{
-    padding: 15px;
+	padding: 20px;
+}
+/* index */
+#top{
+	text-align: right;
+	padding-right: 30px;
+}
 
+#logo{
+	margin-bottom: 30px;
 }
-#top_line{
-    padding: 10px;
+
+#text{
+	padding: 30px;
 }
-#top_line a{
-   font: 14px "Lucida Grande",Helvetica,Arial,sans-serif;
-   padding-right: 20px;
-    color: #00B7FF;
+
+#text p{
+	font-size:20px;
 }
+/*main*/
+
+#menu{
+	float: left;
+	height:2000px;
+	width: 20%;
+}
+
 #content{
-    padding: 30px;
+	padding: 30px;
+	padding-top:30px;
+	margin-left: 20%;
 }
+
 #content p{
-    font: 20px "Lucida Grande",Helvetica,Arial,sans-serif;
-}
-#buttons a{
-    margin-right: 5px;
+	font-size: 20px;
 }
 
+/* sign in */
 
-#p_text{
-    font: 25px "Lucida Grande",Helvetica,Arial,sans-serif !important;
-
+#form_sign{
+	border: 2px solid #85CCE9;
+	background: #f5f5f5;
+	margin: 150px auto;
+	width: 550px;
+	padding: 20px;
 }
 
-#menupanel{
-    float: left;
-    width: 20%;
-    height: 1000px;
+.profile_inp{
+	padding-top: 30px;
+}
+#form_profile{
+	width: 70%;
 }
